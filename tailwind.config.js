@@ -3,30 +3,40 @@ module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      colors: {
+        'black': '#191308',
+        'light-black': '#322A26',
+        'gold': '#A98760',
+        'gold-light': '#BA9F80',
+        'grey-light': '#F6F4F3'
+      },
       fontFamily: {
-        'inter': ['Inter', 'Helvetica', 'sans-serif'],
-      }
+        sans: ['Poppins', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
     },
-    screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    }
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow': {
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-none': {
+          textShadow: 'none',
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 }

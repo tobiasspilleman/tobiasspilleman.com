@@ -1,13 +1,14 @@
 [
   {
-    "name": "Title",
-    "previewText": "BlaBlaBla",
+    "name": "Portfolio",
+    "previewText": "My very own website to showcase my projects and interests 🚀",
     "description": "",
     "technologies": [
       "react", "ts"
     ],
     "images": ["", ""],
     "state": "",
-    "finished": ""
+    "finished": "",
+    "githubLink": "https://github.com/tobiasspilleman/tobiasspilleman.com"
   }
 ]

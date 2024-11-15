@@ -6,4 +6,5 @@ export interface Project {
     images: string[]
     state: string
     finished: string
+    githubLink: string
 }

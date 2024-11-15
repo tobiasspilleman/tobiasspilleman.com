@@ -16,7 +16,6 @@ const IndexPage = () => {
       </div>
       <section className="home">
         <WelcomeComponent />
-        <AboutComponent />
         <h2 className="text-center text-5xl font-bold my-10">Projects</h2>
         <div className="flex flex-row flex-wrap justify-between mx-[15%] gap-5 mb-5">
           {projects.map((project, index) => (
@@ -31,8 +30,7 @@ const IndexPage = () => {
           ))}
         </div>
         <div className="mx-[15%] my-5">
-          <Button text="All projects" callBackFunction={console.log} />
-        </div>
+            <Button text="All projects" callBackFunction={() => { window.location.href = "https://www.tobiasspilleman.com/projects"; }} />        </div>
       </section>
     </>
   );

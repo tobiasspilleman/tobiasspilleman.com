@@ -6,7 +6,7 @@ const NavigationBar = () => {
 
     return (
         <>
-            <nav className="w-screen bg-transparent px-10 lg:px- py-4 border-b border-gray-300 flex items-center justify-center sticky top-0">
+            <nav className="full bg-transparent px-10 lg:px- py-4 border-b border-gray-300 flex items-center justify-center sticky top-0">
                 <div>
                     <a href='https://tobiasspilleman.com' className="flex items-center">
                         <Image src={logo} alt="Logo" className="w-7 h-7 mr-3" />

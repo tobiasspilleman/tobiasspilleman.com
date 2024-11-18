@@ -10,7 +10,7 @@ const Projects = () => {
         <>
             <NavigationBar />
             <div className="flex flex-col justify-center items-center w-full py-10">
-                <div className="w-1/2 h-full">
+                <div className="p-[5vw] w-full sm:w-3/4 md:w-1/2 h-full">
                     <p className="text-black text-5xl font-bold mb-10">Projects</p>
                     <div className="flex flex-row flex-wrap justify-between gap-5">
                         {projects.map((project, index) => (

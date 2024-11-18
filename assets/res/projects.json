@@ -2,7 +2,7 @@
   {
     "name": "Portfolio",
     "previewText": "My very own website to showcase my projects and interests 🚀",
-    "description": "",
+    "description": "With this portfolio you can follow my projects and interests.",
     "technologies": [
       "react", "ts"
     ],

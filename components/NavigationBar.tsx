@@ -8,9 +8,9 @@ const NavigationBar = () => {
         <>
             <nav className="full bg-white px-[5vw] lg:px- py-4 border-b border-gray-300 flex items-center justify-center sticky top-0">
                 <div>
-                    <a href='https://tobiasspilleman.com' className="flex items-center">
+                    <a href='/' className="flex items-center">
                         <Image src={logo} alt="Logo" className="w-7 h-7 mr-3" />
-                        <h2 className="font-bold text-2xl font-inter">Tobias Spilleman</h2>
+                        <h2 className="hidden sm:block font-bold text-2xl font-inter">Tobias Spilleman</h2>
                     </a>
                 </div>
                 <div className="flex justify-end ml-auto">

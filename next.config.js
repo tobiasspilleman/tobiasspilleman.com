@@ -1,8 +1,17 @@
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = {
-    images: { unoptimized: true }
-}
-
-module.exports = nextConfig;
+module.exports = {
+    distDir: 'build', // Change 'build' to your desired output directory name
+    exportPathMap: async function (
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+    ) {
+        return {
+            '/': { page: '/' },
+            '/blog': { page: '/blog' },
+            '/projects': { page: '/projects' },
+            '/blog/[slug]': { page: '/blog/[slug]' }
+        };
+    },
+};

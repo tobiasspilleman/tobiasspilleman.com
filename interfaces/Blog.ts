@@ -15,8 +15,14 @@ export interface Chapter {
 }
 
 export interface Blog {
+    id: number;
     title: string;
+    headingImage: string;
+    headingImageAlt: string;
+    headingImageAuthor: string;
     date: string;
+    readingTime: string;
     chapters: Chapter[];
     tags: string[];
+    slug: string;
 }

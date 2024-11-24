@@ -5,27 +5,26 @@ import ProjectPreviewComponent from "../components/ProjectPreviewComponent";
 import Button from "../components/button";
 import { getProjects } from "../services/getProjects";
 import {Project} from "../interfaces/Project";
+import Head from 'next/head';
 
 const IndexPage = () => {
-  const projects: Project[] = getProjects().slice(0, 5);
+    const [projects, setProjects] = React.useState<Project[]>([]);
+
+    React.useEffect(() => {
+        getProjects().then((data) => setProjects(data.slice(0, 5)));
+    }, []);
   // const blogs: Blog[] = getBlogs().slice(0, 5);
 
   return (
     <>
+        <Head>
+            <title>Tobias Spilleman - Portfolio</title>
+        </Head>
       <div className="App">
         <NavigationBar />
       </div>
       <section className="home">
         <WelcomeComponent />
-          {/*<h2 className=" text-center text-5xl font-bold my-10">Blog</h2>
-            <div className="flex flex-col mx-[15%]">
-                {blogs.map((blog, index) => (
-                        <BlogPreview blogEntry={blog} />
-                ))}
-            </div>
-            <div className="mx-[15%] mt-5 mb-24">
-                <Button text="All blogs" callBackFunction={() => { window.location.href = "https://www.tobiasspilleman.com/blogs"; }} />        </div>
-        */}
         <h2 className="text-center text-5xl font-bold my-10">Projects</h2>
         <div className="flex flex-row flex-wrap justify-between mx-[5vw] md:mx-[15%] gap-5 mb-5">
           {projects.map((project, index) => (

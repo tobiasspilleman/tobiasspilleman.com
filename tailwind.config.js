@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'false',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
@@ -15,22 +16,5 @@ module.exports = {
         serif: ['Merriweather', 'serif'],
       },
     },
-  },
-  plugins: [
-    function ({ addUtilities }) {
-      const newUtilities = {
-        '.text-shadow': {
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-        },
-        '.text-shadow-lg': {
-          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)',
-        },
-        '.text-shadow-none': {
-          textShadow: 'none',
-        },
-      };
-
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    },
-  ],
+  }
 }

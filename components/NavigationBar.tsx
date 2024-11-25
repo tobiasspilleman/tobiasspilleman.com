@@ -17,7 +17,6 @@ const NavigationBar = () => {
                     <a href="/" className="text-sm font-inter text-gray-600 font-medium">Home</a>
                     <a href="/blog" className="text-sm font-inter text-gray-600 font-medium ml-4">Blog</a>
                     <a href="/projects" className="text-sm font-inter text-gray-600 font-medium ml-4">Projects</a>
-                    <a href="mailto:hello@tobiasspilleman.com" className="text-sm font-inter text-gray-600 font-medium ml-4">Contact</a>
                 </div>
             </nav>
         </>

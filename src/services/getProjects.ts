@@ -2,7 +2,7 @@ import {Project} from "../interfaces/Project";
 
 export const getProjects = async (): Promise<Project[]> => {
     try {
-        const response = await fetch("https://www.tobiasspilleman.com/data/projects.json");
+        const response = await fetch("https://files.tobiasspilleman.com/projects.json");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

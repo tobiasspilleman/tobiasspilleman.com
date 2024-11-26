@@ -15,7 +15,7 @@ export interface Chapter {
 }
 
 export interface Blog {
-    id: number;
+    id: string;
     title: string;
     headingImage: string;
     headingImageAlt: string;

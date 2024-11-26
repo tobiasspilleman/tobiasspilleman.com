@@ -20,7 +20,7 @@ const BlogEntry: NextPage = () => {
         });
     }, []);
 
-    const blog = blogs.find(blog => blog.id === parseInt(slug as string));
+    const blog = blogs.find(blog => blog.id === slug);
 
     if (loading) {
         return null;
@@ -56,8 +56,11 @@ const BlogEntry: NextPage = () => {
                                                      className="w-full h-96 object-cover rounded-lg mb-5"/>
                                             ) : (
                                                 (content as any).paragraphs.map((paragraph: string, index: number) => (
-                                                    <p key={index} className="text-black text-lg">{paragraph}</p>
-                                                ))
+    <React.Fragment key={index}>
+        <p className="text-black text-lg">{paragraph}</p>
+        <p>&nbsp;</p>
+    </React.Fragment>
+))
                                             )}
                                         </div>
                                     ))}

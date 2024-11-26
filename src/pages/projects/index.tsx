@@ -16,6 +16,7 @@ const Projects = () => {
         <>
             <Head>
                 <title>Tobias Spilleman - Projects</title>
+                <link rel="icon" type="image/x-icon" href="/assets/logo-image.png"/>
             </Head>
             <NavigationBar/>
             <div className="flex flex-col justify-center items-center w-full py-10">

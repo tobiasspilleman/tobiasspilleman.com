@@ -31,8 +31,9 @@ const BlogEntry: NextPage = () => {
             <>
                 <Head>
                     <title>{blog.title} - Tobias Spilleman</title>
+                    <link rel="icon" type="image/x-icon" href="/assets/logo-image.png"/>
                 </Head>
-                <NavigationBar />
+                <NavigationBar/>
                 <div className="flex flex-col justify-center items-center w-full py-10">
                     <div className="p-[5vw] sm:p-0 w-full sm:w-3/4 md:w-1/2 h-full">
                         <h1 className="text-black text-5xl font-bold mb-5">{blog.title}</h1>

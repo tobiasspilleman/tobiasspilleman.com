@@ -19,10 +19,11 @@ const IndexPage = () => {
     <>
         <Head>
             <title>Tobias Spilleman - Portfolio</title>
+            <link rel="icon" type="image/x-icon" href="/assets/logo-image.png"/>
         </Head>
-      <div className="App">
-        <NavigationBar />
-      </div>
+        <div className="App">
+            <NavigationBar/>
+        </div>
       <section className="home">
         <WelcomeComponent />
         <h2 className="text-center text-5xl font-bold my-10">Projects</h2>

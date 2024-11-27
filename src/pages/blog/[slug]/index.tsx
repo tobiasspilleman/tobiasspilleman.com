@@ -66,6 +66,9 @@ const BlogEntry: NextPage = () => {
                                     ))}
                                 </div>
                             ))}
+                            <p>{blog.tags.map((tag, index) => {
+                                return <span key={index} className="text-black bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-md mr-2">{tag}</span>
+                            })}</p>
                         </div>
                     </div>
                 </div>

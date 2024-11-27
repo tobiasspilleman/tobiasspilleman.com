@@ -38,13 +38,13 @@ const BlogEntry: NextPage = () => {
                     <div className="p-[5vw] sm:p-0 w-full sm:w-3/4 md:w-1/2 h-full">
                         <h1 className="text-black text-5xl font-bold mb-5">{blog.title}</h1>
                         <img src={blog.headingImage} alt={blog.headingImageAlt}
-                             className="w-full max-h-96 object-cover rounded-lg mb-5"/>
-                        <p className="text-grey-light">{blog.headingImageAuthor}</p>
-                        <p className="text-gray-400 mb-10">{new Date(blog.date).toLocaleDateString('de-DE', {
+                             className="w-full h-56 sm:h-80 md:h-96 object-cover rounded-lg"/>
+                        <p className="text-gray-400 mb-10 pr-2 w-full text-end">{blog.headingImageAuthor}</p>
+                        <p className="text-gray-400 mb-2">{new Date(blog.date).toLocaleDateString('de-DE', {
                             day: '2-digit',
                             month: '2-digit',
                             year: 'numeric'
-                        })}</p>
+                        })} · {blog.readingTime}</p>
                         <div className="flex flex-col w-full">
                             {blog.chapters.map((chapter, index) => (
                                 <div key={index} className="mb-5">
@@ -53,14 +53,14 @@ const BlogEntry: NextPage = () => {
                                         <div key={index} className="mb-5">
                                             {content.hasOwnProperty("src") ? (
                                                 <img src={(content as any).src} alt={(content as any).alt}
-                                                     className="w-full h-96 object-cover rounded-lg mb-5"/>
+                                                     className="w-full h-56 sm:h-80 md:h-96 object-cover rounded-lg mb-5"/>
                                             ) : (
                                                 (content as any).paragraphs.map((paragraph: string, index: number) => (
-    <React.Fragment key={index}>
-        <p className="text-black text-lg">{paragraph}</p>
-        <p>&nbsp;</p>
-    </React.Fragment>
-))
+                                                    <React.Fragment key={index}>
+                                                        <p className="text-black text-lg">{paragraph}</p>
+                                                        <p>&nbsp;</p>
+                                                    </React.Fragment>
+                                                ))
                                             )}
                                         </div>
                                     ))}

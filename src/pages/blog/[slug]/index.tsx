@@ -5,6 +5,7 @@ import React from "react";
 import {Blog} from "../../../interfaces/Blog";
 import {getBlogs} from "../../../services/getBlogEntries";
 import Head from "next/head";
+import ResponsiveWrapper from "../../../components/ResponsiveWrapper";
 
 const BlogEntry: NextPage = () => {
     const router = useRouter();
@@ -34,8 +35,7 @@ const BlogEntry: NextPage = () => {
                     <link rel="icon" type="image/x-icon" href="/assets/logo-image.png"/>
                 </Head>
                 <NavigationBar/>
-                <div className="flex flex-col justify-center items-center w-full py-10">
-                    <div className="p-[5vw] sm:p-0 w-full sm:w-3/4 md:w-1/2 h-full">
+                    <ResponsiveWrapper>
                         <h1 className="text-black text-5xl font-bold mb-5">{blog.title}</h1>
                         <img src={blog.headingImage} alt={blog.headingImageAlt}
                              className="w-full h-56 sm:h-80 md:h-96 object-cover rounded-lg"/>
@@ -70,8 +70,7 @@ const BlogEntry: NextPage = () => {
                                 return <span key={index} className="text-black bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-md mr-2">{tag}</span>
                             })}</p>
                         </div>
-                    </div>
-                </div>
+                    </ResponsiveWrapper>
             </>
         );
     } else {

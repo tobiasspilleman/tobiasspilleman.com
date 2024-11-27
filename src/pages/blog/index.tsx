@@ -4,6 +4,7 @@ import {getBlogs} from "../../services/getBlogEntries";
 import BlogPreview from "../../components/BlogPreview";
 import React from "react";
 import Head from "next/head";
+import ResponsiveWrapper from "../../components/ResponsiveWrapper";
 
 const Blogs = () => {
     const [blogs, setBlogs] = React.useState<Blog[]>([]);
@@ -32,8 +33,7 @@ const Blogs = () => {
                 <title>Tobias Spilleman - Blog</title>
                 <link rel="icon" type="image/x-icon" href="/assets/logo-image.png"/>
             </Head>
-            <div className="flex flex-col justify-center items-center w-full py-10">
-                <div className="p-[5vw] sm:p-0 w-full sm:w-3/4 md:w-1/2 h-full">
+                <ResponsiveWrapper>
                     <h1 className="text-black text-5xl font-bold mb-10">Blog</h1>
                     <div className="flex flex-row flex-wrap justify-between w-full">
                         {blogs.length === 0 ? (
@@ -51,8 +51,7 @@ const Blogs = () => {
                             ))
                         )}
                     </div>
-                </div>
-            </div>
+                </ResponsiveWrapper>
         </>
     )
 }

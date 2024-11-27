@@ -1,4 +1,3 @@
-/* Author: Tobias Spilleman */
 
 import React from 'react';
 

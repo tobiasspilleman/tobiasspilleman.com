@@ -8,8 +8,8 @@ export function NavigationBar() {
             <div className="w-4/5 flex items-center">
                 <h1 className="text-xl font-bold">Tobias Spilleman</h1>
                 <div className="ml-auto flex items-center gap-6">
-                    <Link to="/blog" className="text-blue-500 hover:underline">Blog</Link>
-                    <Link to="/books" className="text-blue-500 hover:underline">Books</Link>
+                    <Link to="/blog" className="text-black font-semibold">Blog</Link>
+                    <Link to="/books" className="text-black font-semibold">Books</Link>
                     <a
                         href="https://github.com/tobiasspilleman"
                         target="_blank"
